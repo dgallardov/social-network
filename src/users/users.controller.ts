@@ -15,7 +15,7 @@ export class UsersController {
 
   @Get()
   async findAll(): Promise<Omit<User,'password'>[]> {
-    return this.usersService.findAll();
+    return await this.usersService.findAll();
   }
 
   @Get(':id')
